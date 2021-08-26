@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageView
+        android:id="@+id/ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/baseline_cloud_download_24"
+        app:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/rgSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_regular"
+        android:layout_marginVertical="@dimen/spacing_regular"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/ivBanner">
+
+
+        <RadioButton
+            style="@style/LoadingApp.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/download_using_glide" />
+
+        <RadioButton
+            style="@style/LoadingApp.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_regular"
+            android:layout_marginTop="@dimen/spacing_regular"
+            android:text="@string/download_using_loadapp" />
+
+        <RadioButton
+            style="@style/LoadingApp.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/download_using_refrofit" />
+
+    </RadioGroup>
+
+    <com.udacity.LoadingButton
+        android:id="@+id/btnDownload"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/spacing_regular"
+        app:buttonTextColor="@color/white"
+        app:defaultButtonBackgroundColor="@color/colorPrimary"
+        app:defaultButtonText="@string/button_download"
+        app:downloadingButtonText="@string/button_loading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:progressBackgroundColor="@color/colorPrimaryDark"
+        app:progressColor="@color/colorProgress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

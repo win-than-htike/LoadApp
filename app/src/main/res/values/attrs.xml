@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingButton">
+        <attr name="defaultButtonText" format="string" />
+        <attr name="downloadingButtonText" format="string" />
+        <attr name="buttonTextColor" format="color" />
+        <attr name="progressColor" format="color"/>
+        <attr name="defaultButtonBackgroundColor" format="color"/>
+        <attr name="progressBackgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

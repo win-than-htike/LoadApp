@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:duration="@android:integer/config_longAnimTime"
+        app:autoTransition="animateToEnd"
+        app:constraintSetStart="@id/start" />
+
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/tvFileNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/centerGuildLine" />
+
+        <Constraint
+            android:id="@+id/tvFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerGuildLine" />
+
+
+        <Constraint
+            android:id="@+id/tvStatusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/centerGuildLine" />
+
+
+        <Constraint
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerGuildLine" />
+
+
+        <Constraint
+            android:id="@+id/btnOk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:translationY="100dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/tvFileNameTitle"
+            style="@style/LoadingApp.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_file_name"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/centerGuildLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/tvFileName"
+            style="@style/LoadingApp.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerGuildLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/tvStatusTitle"
+            style="@style/LoadingApp.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_regular"
+            android:text="@string/text_status"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/centerGuildLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFileName" />
+
+
+        <Constraint
+            android:id="@+id/tvStatus"
+            style="@style/LoadingApp.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerGuildLine"
+            app:layout_constraintTop_toTopOf="@id/tvStatusTitle" />
+
+        <Constraint
+            android:id="@+id/btnOk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:translationY="0dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+</MotionScene>
